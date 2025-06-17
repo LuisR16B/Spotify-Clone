@@ -1,0 +1,28 @@
+.no-scrollbar::-webkit-scrollbar{
+  display: none;
+}
+
+.no-scrollbar{
+  scrollbar-width: none;
+}
+
+.animate__animated.animate__slideInLeft {
+  --animate-duration: 0.2s;
+}
+
+
+.color-scrollbar::-webkit-scrollbar {
+  width: 10px;
+  background-color: transparent;
+}
+
+.color-scrollbar::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+.color-scrollbar:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(255,255,255,0.5);
+}

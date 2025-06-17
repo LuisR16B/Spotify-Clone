@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html class="h-full" lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./src/css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  </head>
+  <body class="h-full grid grid-rows-[80px_1fr_80px] bg-black cursor-default">
+    <nav class="flex items-center px-7 py-4 gap-4 justify-between">
+      <div class="flex items-center gap-3">
+        <img class="w-[35px] cursor-pointer" src="./src/img/logo.png" alt="logo">
+        <div class="bg-[#1f1f1f] rounded-full p-3 rounded-full cursor-pointer cursor-pointer hover:scale-[1.05] sm:hidden">
+          <img src="./src/img/icon/search.svg" alt="search">
+        </div>
+      </div>
+      <div class="flex items-center gap-2">
+        <div class="hidden p-3 bg-[#1f1f1f] rounded-full hover:bg-zinc-800 cursor-pointer hover:scale-[1.05] sm:block">
+          <img src="./src/img/icon/house.svg" alt="house">
+        </div>
+        <div class="flex bg-[#1f1f1f] rounded-full hover:bg-zinc-800 hover:scale-[1.05] sm:hover:scale-[1]">
+          <div class="hidden p-3 rounded-full sm:rounded-tr-none sm:rounded-br-none cursor-pointer sm:block">
+            <img src="./src/img/icon/search.svg" alt="search">
+          </div>
+          <input class="hidden p-3 text-[#B3B3B3] focus:border-none focus:outline-none sm:flex" type="text" placeholder="¿Que quieres reproducir?">
+          <div class="hidden sm:flex items-center pt-3 pr-3 pb-3 rounded-tr-full rounded-br-full">
+            <div class="pl-4 border-l border-l-[#B3B3B3]">
+              <img class="cursor-pointer" src="./src/img/icon/explorar.svg" alt="explorar">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex items-center gap-4">
+        <button class="hidden px-4 py-1 bg-[#fff] rounded-full font-bold text-sm lg:block cursor-pointer hover:scale-[1.05] hover:bg-zinc-300">Descubrir Premium</button>
+        <div class="flex text-[#B3B3B3] items-center gap-2 font-semibold text-sm hover:scale-[1.05] hover:text-[#fff] cursor-pointer">
+          <img src="./src/img/icon/descarga.svg" alt="descarga">
+          <p>Instalar app</p>
+        </div>
+        <div class="p-3 bg-[#1f1f1f] rounded-full hover:bg-zinc-800 cursor-pointer hover:scale-[1.05] lg:hidden">
+          <img src="./src/img/icon/align-justify.svg" alt="menu">
+        </div>
+        <img class="hidden lg:block cursor-pointer hover:scale-[1.05]" src="./src/img/icon/notificaciones.svg" alt="notificaciones">
+        <img class="hidden lg:block cursor-pointer hover:scale-[1.05]" src="./src/img/icon/actividad-amigos.svg" alt="actividad con amigos">
+        <div class="hidden p-3 bg-[#1f1f1f] rounded-full hover:bg-zinc-800 lg:block cursor-pointer hover:scale-[1.05]">
+          <span class="bg-red-600 px-2 py-1 rounded-full font-bold text-sm">D</span>
+        </div>
+      </div>
+    </nav>
+    <main class="h-full grid grid-cols-[1fr] sm:grid-cols-[80px_1fr] gap-2 mx-[10px] overflow-hidden lg:grid-cols-[350px_1fr]">
+      <aside class="hidden sm:flex h-full bg-[#121212] lg:p-4 flex-col items-center lg:gap-3 overflow-hidden rounded-lg lg:items-start group/biblioteca">
+        <section class="w-full p-3 lg:p-0 flex flex-col items-center gap-4 lg:items-start">
+          <img class="lg:hidden cursor-pointer" src="./src/img/icon/abrir.svg" alt="abrir">
+          <div class="p-3 bg-[#1f1f1f] rounded-full hover:bg-zinc-800 cursor-pointer lg:hidden">
+            <img src="./src/img/icon/plus.svg" alt="plus">
+          </div>
+          <div class="hidden lg:flex w-full justify-between items-center text-[#fff] font-bold">
+            <div class="flex gap-2">
+              <img class="hidden group-hover/biblioteca:block animate__animated animate__slideInLeft" src="./src/img/icon/biblioteca.svg" alt="biblioteca">
+              <h3>Tu biblioteca</h3>
+            </div>
+            <div class="flex gap-2">
+              <button class="bg-[#1f1f1f] px-3 py-1 flex items-center gap-2 rounded-full cursor-pointer hover:bg-zinc-800">
+                <img src="./src/img/icon/plus.svg" alt="plus">
+                <span>Crear</span>
+              </button>
+              <img class="hover:scale-[1.05] cursor-pointer" src="./src/img/icon/ampliar.SVG" alt="ampliar">
+            </div>
+          </div>
+          <div class="hidden lg:flex gap-2 text-[#fff] font-semibold">
+            <button class="bg-[#1f1f1f] px-3 py-1 rounded-full cursor-pointer hover:bg-zinc-800">Lista</button>
+            <button class="bg-[#1f1f1f] px-3 py-1 rounded-full cursor-pointer hover:bg-zinc-800">Artistas</button>
+            <button class="bg-[#1f1f1f] px-3 py-1 rounded-full cursor-pointer hover:bg-zinc-800">Albumes</button>
+          </div>
+        </section>
+        <section class="w-full h-full flex flex-col items-center gap-3 lg:gap-1 overflow-y-auto color-scrollbar lg:items-start">
+          <div class="hidden w-full lg:flex justify-between px-2">
+            <img class="w-[18px] cursor-pointer" src="./src/img/icon/search.svg" alt="search">
+            <div class="flex text-[#B3B3B3] gap-2 cursor-pointer hover:scale-[1.05] hover:text-[#fff]">
+              <span>Recientes</span>
+              <img src="./src/img/icon/recientes.svg" alt="recientes">
+            </div>
+          </div>
+          <div class="lg:w-full lg:flex gap-4 p-2 hover:bg-zinc-800 rounded-sm cursor-pointer group/perfil">
+            <div class="relative flex-none flex justify-center w-[48px] items-center  rounded-sm overflow-hidden">
+              <img class="lg:group-hover/perfil:opacity-50" src="./src/img/liked-songs-64.png" alt="me gusta">
+              <img class="absolute opacity-0 lg:group-hover/perfil:opacity-100" src="./src/img/icon/play-blanco.svg" alt="">
+            </div>
+            <div class="hidden lg:block">
+              <h4 class="text-[#fff]">Canciones que te gustan</h4>
+              <div class="flex gap-2 text-[#B3B3B3]">
+                <img src="./src/img/icon/selector.svg" alt="selector">
+                <p>Lista • 9 canciones</p>
+              </div>
+            </div>
+          </div>
+          <div class="lg:w-full lg:flex gap-4 p-2 hover:bg-zinc-800 rounded-sm cursor-pointer group/perfil">
+            <div class="relative w-[48px] flex-none bg-[#1f1f1f] p-3 rounded-sm flex items-center justify-center rounded-sm overflow-hidden">
+              <img class="lg:group-hover/perfil:opacity-50" src="./src/img/icon/musica.svg" alt="musica">
+              <img class="absolute opacity-0 lg:group-hover/perfil:opacity-100" src="./src/img/icon/play-blanco.svg" alt="">
+            </div>
+            <div class="hidden lg:block overflow-hidden">
+              <h4 class="text-[#fff]">playlist</h4>
+              <p class="text-[#B3B3B3] whitespace-nowrap overflow-hidden text-ellipsis">Lista • dqktlkvp6lay4g61rg4o76meh</p>
+            </div>
+          </div>
+          <div class="lg:w-full lg:flex gap-4 p-2 hover:bg-zinc-800 rounded-sm cursor-pointer group/perfil">
+            <div class="w-[48px] flex-none rounded-full relative flex items-center justify-center overflow-hidden">
+              <img class="lg:group-hover/perfil:opacity-50" src="./src/img/img perfiles/nicki.webp" alt="perfil">
+              <img class="absolute opacity-0 lg:group-hover/perfil:opacity-100" src="./src/img/icon/play-blanco.svg" alt="">
+            </div>
+            <div class="hidden lg:block">
+              <h4 class="text-[#fff]">Nicki Nicole</h4>
+              <p class="text-[#B3B3B3]">Artista</p>
+            </div>
+          </div>
+          <div class="lg:w-full lg:flex gap-4 p-2 hover:bg-zinc-800 rounded-sm cursor-pointer group/perfil">
+            <div class="w-[48px] flex-none rounded-full relative flex items-center justify-center overflow-hidden">
+              <img class="lg:group-hover/perfil:opacity-50" src="./src/img/img perfiles/dua.webp" alt="perfil">
+              <img class="absolute opacity-0 lg:group-hover/perfil:opacity-100" src="./src/img/icon/play-blanco.svg" alt="">
+            </div>
+            <div class="hidden lg:block">
+              <h4 class="text-[#fff]">Dua Lipa</h4>
+              <p class="text-[#B3B3B3]">Artista</p>
+            </div>
+          </div>
+          <div class="lg:w-full lg:flex gap-4 p-2 hover:bg-zinc-800 rounded-sm cursor-pointer group/perfil">
+            <div class="w-[48px] flex-none rounded-full relative flex items-center justify-center overflow-hidden">
+              <img class="lg:group-hover/perfil:opacity-50" src="./src/img/img perfiles/micro.webp" alt="perfil">
+              <img class="absolute opacity-0 lg:group-hover/perfil:opacity-100" src="./src/img/icon/play-blanco.svg" alt="">
+            </div>
+            <div class="hidden lg:block">
+              <h4 class="text-[#fff]">Micro TDH</h4>
+              <p class="text-[#B3B3B3]">Artista</p>
+            </div>
+          </div>
+          <div class="lg:w-full lg:flex gap-4 p-2 hover:bg-zinc-800 rounded-sm cursor-pointer group/perfil">
+            <div class="w-[48px] flex-none rounded-full relative flex items-center justify-center overflow-hidden">
+              <img class="lg:group-hover/perfil:opacity-50" src="./src/img/img perfiles/porta.webp" alt="perfil">
+              <img class="absolute opacity-0 lg:group-hover/perfil:opacity-100" src="./src/img/icon/play-blanco.svg" alt="">
+            </div>
+            <div class="hidden lg:block">
+              <h4 class="text-[#fff]">Porta</h4>
+              <p class="text-[#B3B3B3]">Artista</p>
+            </div>
+          </div>
+          <div class="lg:w-full lg:flex gap-4 p-2 hover:bg-zinc-800 rounded-sm cursor-pointer group/perfil">
+            <div class="w-[48px] flex-none rounded-full relative flex items-center justify-center overflow-hidden">
+              <img class="lg:group-hover/perfil:opacity-50" src="./src/img/img perfiles/rosalia.webp" alt="perfil">
+              <img class="absolute opacity-0 lg:group-hover/perfil:opacity-100" src="./src/img/icon/play-blanco.svg" alt="">
+            </div>
+            <div class="hidden lg:block">
+              <h4 class="text-[#fff]">ROSALIA</h4>
+              <p class="text-[#B3B3B3]">Artista</p>
+            </div>
+          </div>
+          <div class="lg:w-full lg:flex gap-4 p-2 hover:bg-zinc-800 rounded-sm cursor-pointer group/perfil">
+            <div class="w-[48px] flex-none rounded-full relative flex items-center justify-center overflow-hidden">
+              <img class="lg:group-hover/perfil:opacity-50" src="./src/img/img perfiles/yatra.webp" alt="perfil">
+              <img class="absolute opacity-0 lg:group-hover/perfil:opacity-100" src="./src/img/icon/play-blanco.svg" alt="">
+            </div>
+            <div class="hidden lg:block">
+              <h4 class="text-[#fff]">Sebastian Yatra</h4>
+              <p class="text-[#B3B3B3]">Artista</p>
+            </div>
+          </div>
+          <div class="lg:w-full lg:flex gap-4 p-2 hover:bg-zinc-800 rounded-sm cursor-pointer group/perfil">
+            <div class="w-[48px] flex-none rounded-full relative flex items-center justify-center overflow-hidden">
+              <img class="lg:group-hover/perfil:opacity-50" src="./src/img/img perfiles/karol.webp" alt="perfil">
+              <img class="absolute opacity-0 lg:group-hover/perfil:opacity-100" src="./src/img/icon/play-blanco.svg" alt="">
+            </div>
+            <div class="hidden lg:block">
+              <h4 class="text-[#fff]">KAROL G</h4>
+              <p class="text-[#B3B3B3]">Artista</p>
+            </div>
+          </div>
+          <div class="lg:w-full lg:flex gap-4 p-2 hover:bg-zinc-800 rounded-sm cursor-pointer group/perfil">
+            <div class="w-[48px] flex-none rounded-full relative flex items-center justify-center overflow-hidden">
+              <img class="lg:group-hover/perfil:opacity-50" src="./src/img/img perfiles/omar.webp" alt="perfil">
+              <img class="absolute opacity-0 lg:group-hover/perfil:opacity-100" src="./src/img/icon/play-blanco.svg" alt="">
+            </div>
+            <div class="hidden lg:block">
+              <h4 class="text-[#fff]">Don Omar</h4>
+              <p class="text-[#B3B3B3]">Artista</p>
+            </div>
+          </div>
+          <div class="lg:w-full lg:flex gap-4 p-2 hover:bg-zinc-800 rounded-sm cursor-pointer group/perfil">
+            <div class="w-[48px] flex-none rounded-full relative flex items-center justify-center overflow-hidden">
+              <img class="lg:group-hover/perfil:opacity-50" src="./src/img/img perfiles/piso.webp" alt="perfil">
+              <img class="absolute opacity-0 lg:group-hover/perfil:opacity-100" src="./src/img/icon/play-blanco.svg" alt="">
+            </div>
+            <div class="hidden lg:block">
+              <h4 class="text-[#fff]">Piso 21</h4>
+              <p class="text-[#B3B3B3]">Artista</p>
+            </div>
+          </div>
+        </section>
+      </aside>
+      <header class="flex flex-col gap-4 px-8 py-4 bg-[#121212] w-full h-full rounded-lg  overflow-hidden">
+        <section class="flex gap-3">
+          <button class="bg-[#fff] px-3 py-1 rounded-full cursor-pointer">Todo</button>
+          <button class="bg-zinc-800 hover:bg-zinc-700 text-[#fff] px-3 py-1 rounded-full cursor-pointer">Musica</button>
+          <button class="bg-zinc-800 hover:bg-zinc-700 text-[#fff] px-3 py-1 rounded-full cursor-pointer">Podcasts</button>
+        </section>
+        <section class="flex flex-col gap-6 overflow-y-auto color-scrollbar">
+          <section class="flex flex-col gap-3">
+            <div>
+              <p class="text-[#B3B3B3] text-xs">Musica sin fin basada en tus canciones y artistas favoritos.</p>
+              <div class="justify-between flex items-end">
+                <h3 class="text-[#fff] text-2xl font-bold">Emisoras recomendadas</h3>
+                <a class="text-[#B3B3B3] text-xs font-bold pr-2" href="#">Mostrar todos</a>
+              </div>
+            </div>
+            <div class="relative flex items-center group/btn">
+              <button class="bg-gray-900 rounded-full p-2 cursor-pointer z-1 absolute opacity-0 group-hover/btn:opacity-100">
+                <img src="./src/img/icon/flecha-iz.svg" alt="izquierda">
+              </button>
+              <button class="bg-gray-900 rounded-full p-2 cursor-pointer z-1 absolute opacity-0 group-hover/btn:opacity-100 right-0">
+                <img src="./src/img/icon/flecha-der.svg" alt="derecha">
+              </button>
+              <div class="flex overflow-x-auto no-scrollbar">
+                <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
+                  <div class="relative">
+                    <img class="rounded-lg" src="./src/img/img tarjetas/yandel.jpg" alt="album">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                      <img src="./src/img/icon/play.svg" alt="play">
+                    </div>
+                  </div>
+                  <p class="text-[#B3B3B3] text-sm">Con tony Dize, don Omar, Plan B y mas</p>
+                </div>
+                <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
+                  <div class="relative">
+                    <img class="rounded-lg" src="./src/img/img tarjetas/nacho.jpg" alt="album">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                      <img src="./src/img/icon/play.svg" alt="play">
+                    </div>
+                  </div>
+                  <p class="text-[#B3B3B3] text-sm">Con Piso 21, Chino & Nacho, Camilo y mas</p>
+                </div>
+                <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
+                  <div class="relative">
+                    <img class="rounded-lg" src="./src/img/img tarjetas/sech.jpg" alt="album">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                      <img src="./src/img/icon/play.svg" alt="play">
+                    </div>
+                  </div>
+                  <p class="text-[#B3B3B3] text-sm">Con Bad Bunny, Daddy Yankee, Lunay y mas</p>
+                </div>
+                <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
+                  <div class="relative">
+                    <img class="rounded-lg" src="./src/img/img tarjetas/arcangel.jpg" alt="album">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                      <img src="./src/img/icon/play.svg" alt="play">
+                    </div>
+                  </div>
+                  <p class="text-[#B3B3B3] text-sm">Con Don Omar, Plan B, Tony Dize y mas</p>
+                </div>
+                <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
+                  <div class="relative">
+                    <img class="rounded-lg" src="./src/img/img tarjetas/piso 21.jpg" alt="album">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                      <img src="./src/img/icon/play.svg" alt="play">
+                    </div>
+                  </div>
+                  <p class="text-[#B3B3B3] text-sm">Con Danny Ocean, Morat, J Balvin y mas</p>
+                </div>
+                <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
+                  <div class="relative">
+                    <img class="rounded-lg" src="./src/img/img tarjetas/micro.jpg" alt="album">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                      <img src="./src/img/icon/play.svg" alt="play">
+                    </div>
+                  </div>
+                  <p class="text-[#B3B3B3] text-sm">Con Danny Ocean, KHEA, Milo j y mas</p>
+                </div>
+                <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
+                  <div class="relative">
+                    <img class="rounded-lg" src="./src/img/img tarjetas/karol.jpg" alt="album">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                      <img src="./src/img/icon/play.svg" alt="play">
+                    </div>
+                  </div>
+                  <p class="text-[#B3B3B3] text-sm">Con Feid,Manuel Turizo,Bad Bunny y mas</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="flex flex-col gap-3">
+            <div class="justify-between flex items-end">
+              <h3 class="text-[#fff] text-2xl font-bold">Emisoras populares</h3>
+              <a class="text-[#B3B3B3] text-xs font-bold pr-2" href="#">Mostrar todos</a>
+            </div>
+            <div class="relative flex items-center group/btn">
+              <button class="bg-gray-900 rounded-full p-2 cursor-pointer z-1 absolute opacity-0 group-hover/btn:opacity-100">
+                <img src="./src/img/icon/flecha-iz.svg" alt="izquierda">
+              </button>
+              <button class="bg-gray-900 rounded-full p-2 cursor-pointer z-1 absolute opacity-0 group-hover/btn:opacity-100 right-0">
+                <img src="./src/img/icon/flecha-der.svg" alt="derecha">
+              </button>
+              <div class="flex overflow-x-auto no-scrollbar">
+                <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
+                  <div class="relative">
+                    <img class="rounded-lg" src="./src/img/img tarjetas/kany.jpg" alt="album">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                      <img src="./src/img/icon/play.svg" alt="play">
+                    </div>
+                  </div>
+                  <p class="text-[#B3B3B3] text-sm overflow-hidden text-ellipsis line-clamp-2">Con Sin Bandera, Camilo, La Quinta Estacion y mas</p>
+                </div>
+                <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
+                  <div class="relative">
+                    <img class="rounded-lg" src="./src/img/img tarjetas/grupo.jpg" alt="album">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                      <img src="./src/img/icon/play.svg" alt="play">
+                    </div>
+                  </div>
+                  <p class="text-[#B3B3B3] text-sm overflow-hidden text-ellipsis line-clamp-2">Con Rey Ruiz, Davud Pabon, Oscar D'Leon y mas</p>
+                </div>
+                <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
+                  <div class="relative">
+                    <img class="rounded-lg" src="./src/img/img tarjetas/juan.jpg" alt="album">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                      <img src="./src/img/icon/play.svg" alt="play">
+                    </div>
+                  </div>
+                  <p class="text-[#B3B3B3] text-sm overflow-hidden text-ellipsis line-clamp-2">Con Proyecto Uno, Bacilos, Willie Colon y mas</p>
+                </div>
+                <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
+                  <div class="relative">
+                    <img class="rounded-lg" src="./src/img/img tarjetas/feid.jpg" alt="album">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                      <img src="./src/img/icon/play.svg" alt="play">
+                    </div>
+                  </div>
+                  <p class="text-[#B3B3B3] text-sm">Con Quevedo, Bad Bunny, KAROL G y mas</p>
+                </div>
+                <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
+                  <div class="relative">
+                    <img class="rounded-lg" src="./src/img/img tarjetas/bad.jpg" alt="album">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                      <img src="./src/img/icon/play.svg" alt="play">
+                    </div>
+                  </div>
+                  <p class="text-[#B3B3B3] text-sm">Con Feid, Arcangel, Karol G y mas</p>
+                </div>
+                <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
+                  <div class="relative">
+                    <img class="rounded-lg" src="./src/img/img tarjetas/karol.jpg" alt="album">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                      <img src="./src/img/icon/play.svg" alt="play">
+                    </div>
+                  </div>
+                  <p class="text-[#B3B3B3] text-sm overflow-hidden text-ellipsis line-clamp-2">Con Feid, Manuel Turizo, Bad Bunny y mas</p>
+                </div>
+                <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
+                  <div class="relative">
+                    <img class="w-[172px] rounded-lg" src="./src/img/img tarjetas/diomedes.jpg" alt="album">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                      <img src="./src/img/icon/play.svg" alt="play">
+                    </div>
+                  </div>
+                  <p class="text-[#B3B3B3] text-sm overflow-hidden text-ellipsis line-clamp-2">Con Miguel Morales, Los Chiches Vallenatos y mas</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="flex flex-col gap-3">
+            <div>
+              <p class="text-[#B3B3B3] text-xs">Inspirada en tu actividad reciente.</p>
+              <div class="justify-between flex items-end">
+                <h3 class="text-[#fff] text-2xl font-bold">Recomendada para hoy</h3>
+                <a class="text-[#B3B3B3] text-xs font-bold pr-2" href="#">Mostrar todos</a>
+              </div>
+            </div>
+            <div class="relative flex items-center group/btn">
+              <button class="bg-gray-900 rounded-full p-2 cursor-pointer z-1 absolute opacity-0 group-hover/btn:opacity-100">
+                <img src="./src/img/icon/flecha-iz.svg" alt="izquierda">
+              </button>
+              <button class="bg-gray-900 rounded-full p-2 cursor-pointer z-1 absolute opacity-0 group-hover/btn:opacity-100 right-0">
+                <img src="./src/img/icon/flecha-der.svg" alt="derecha">
+              </button>
+              <div class="flex overflow-x-auto no-scrollbar">
+                <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
+                  <div class="relative">
+                    <img class="rounded-lg" src="./src/img/img tarjetas/comoteveo.jpg" alt="album">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                      <img src="./src/img/icon/play.svg" alt="play">
+                    </div>
+                  </div>
+                  <div class="flex flex-col">
+                    <a class="text-[#fff]" href="#">COMO TE VEO</a>
+                    <a class="text-[#B3B3B3] text-sm" href="#">Barho</a>
+                  </div>
+                </div>
+                <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
+                  <div class="relative">
+                    <img class="rounded-lg" src="./src/img/img tarjetas/algodon.jpg" alt="album">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                      <img src="./src/img/icon/play.svg" alt="play">
+                    </div>
+                  </div>
+                  <div class="flex flex-col">
+                    <a class="text-[#fff]" href="#">Algodon</a>
+                    <a class="text-[#B3B3B3] text-sm" href="#">Lasso</a>
+                  </div>
+                </div>
+                <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
+                  <div class="relative">
+                    <img class="rounded-lg" src="./src/img/img tarjetas/besamebonito.jpg" alt="album">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                      <img src="./src/img/icon/play.svg" alt="play">
+                    </div>
+                  </div>
+                  <div class="flex flex-col">
+                    <a class="text-[#fff]" href="#">Besame Bonito (Micro TDH Remix)</a>
+                    <a class="text-[#B3B3B3] text-sm" href="#">Carmen DeLeon, Micro TDH</a>
+                  </div>
+                </div>
+                <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
+                  <div class="relative">
+                    <img class="rounded-lg" src="./src/img/img tarjetas/denada.jpg" alt="album">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                      <img src="./src/img/icon/play.svg" alt="play">
+                    </div>
+                  </div>
+                  <div class="flex flex-col">
+                    <a class="text-[#fff]" href="#">De Nada (Remix)</a>
+                    <a class="text-[#B3B3B3] text-sm" href="#">Yami Safdie, Micro TDH, Rusherking</a>
+                  </div>
+                </div>
+                <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
+                  <div class="relative">
+                    <img class="rounded-lg" src="./src/img/img tarjetas/amapolas.jpg" alt="album">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                      <img src="./src/img/icon/play.svg" alt="play">
+                    </div>
+                  </div>
+                  <div class="flex flex-col">
+                    <a class="text-[#fff]" href="#">Amapolas (Remix)</a>
+                    <a class="text-[#B3B3B3] text-sm" href="#">Leo Rizzi, Danny Ocean</a>
+                  </div>
+                </div>
+                <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
+                  <div class="relative">
+                    <img class="rounded-lg" src="./src/img/img tarjetas/cada.jpg" alt="album">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                      <img src="./src/img/icon/play.svg" alt="play">
+                    </div>
+                  </div>
+                  <div class="flex flex-col">
+                    <a class="text-[#fff]" href="#">Cada Vez Mas <:-)</a>
+                    <a class="text-[#B3B3B3] text-sm" href="#">Marcos Menchasa</a>
+                  </div>
+                </div>
+                <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
+                  <div class="relative">
+                    <img class="rounded-lg" src="./src/img/img tarjetas/queharemos.jpg" alt="album">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                      <img src="./src/img/icon/play.svg" alt="play">
+                    </div>
+                  </div>
+                  <div class="flex flex-col">
+                    <a class="text-[#fff]" href="#">Que Hariamos Los Viernes</a>
+                    <a class="text-[#B3B3B3] text-sm" href="#">Jose Otero, Karen Mendez</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="flex flex-col gap-3">
+            <div>
+              <p class="text-[#B3B3B3] text-xs">Reunimos las mejores canciones de cada interprete.</p>
+              <div class="justify-between flex items-end">
+                <h3 class="text-[#fff] text-2xl font-bold">Lo mejor de cada artista</h3>
+                <a class="text-[#B3B3B3] text-xs font-bold pr-2" href="#">Mostrar todos</a>
+              </div>
+            </div>
+            <div class="relative flex items-center group/btn">
+              <button class="bg-gray-900 rounded-full p-2 cursor-pointer z-1 absolute opacity-0 group-hover/btn:opacity-100">
+                <img src="./src/img/icon/flecha-iz.svg" alt="izquierda">
+              </button>
+              <button class="bg-gray-900 rounded-full p-2 cursor-pointer z-1 absolute opacity-0 group-hover/btn:opacity-100 right-0">
+                <img src="./src/img/icon/flecha-der.svg" alt="derecha">
+              </button>
+              <div class="flex overflow-x-auto no-scrollbar">
+                <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
+                  <div class="relative">
+                    <img class="rounded-lg" src="./src/img/img tarjetas/nacho-mejor.jpg" alt="album">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                      <img src="./src/img/icon/play.svg" alt="play">
+                    </div>
+                  </div>
+                  <p class="text-[#B3B3B3] text-sm overflow-hidden text-ellipsis line-clamp-2">This Is Nacho. Los Temas esenciales, todos en una lista</p>
+                </div>
+                <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
+                  <div class="relative">
+                    <img class="rounded-lg" src="./src/img/img tarjetas/micro-mejor.jpg" alt="album">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                      <img src="./src/img/icon/play.svg" alt="play">
+                    </div>
+                  </div>
+                  <p class="text-[#B3B3B3] text-sm overflow-hidden text-ellipsis line-clamp-2">This Is Micro TDH. Los temas esenciales, todos en una lista.</p>
+                </div>
+                <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
+                  <div class="relative">
+                    <img class="rounded-lg" src="./src/img/img tarjetas/paulo-mejor.jpg" alt="album">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                      <img src="./src/img/icon/play.svg" alt="play">
+                    </div>
+                  </div>
+                  <p class="text-[#B3B3B3] text-sm overflow-hidden text-ellipsis line-clamp-2">This Is Paulo Londra. Los temas esenciales, todos en una lista.</p>
+                </div>
+                <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
+                  <div class="relative">
+                    <img class="rounded-lg" src="./src/img/img tarjetas/natti-mejor.jpg" alt="album">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                      <img src="./src/img/icon/play.svg" alt="play">
+                    </div>
+                  </div>
+                  <p class="text-[#B3B3B3] text-sm overflow-hidden text-ellipsis line-clamp-2">This Is NATTI NATASHA. Los temas esenciales, todos en una lista.</p>
+                </div>
+                <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
+                  <div class="relative">
+                    <img class="rounded-lg" src="./src/img/img tarjetas/maluma-mejor.jpg" alt="album">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                      <img src="./src/img/icon/play.svg" alt="play">
+                    </div>
+                  </div>
+                  <p class="text-[#B3B3B3] text-sm overflow-hidden text-ellipsis line-clamp-2">This Is Maluma. Los temas esenciales, todos en una lista.</p>
+                </div>
+                <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
+                  <div class="relative">
+                    <img class="rounded-lg" src="./src/img/img tarjetas/yatra-mejor.jpg" alt="album">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                      <img src="./src/img/icon/play.svg" alt="play">
+                    </div>
+                  </div>
+                  <p class="text-[#B3B3B3] text-sm overflow-hidden text-ellipsis line-clamp-2">This Is Sebastian Yatra. Los temas esenciales, todos en una lista.</p>
+                </div>
+                <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
+                  <div class="relative">
+                    <img class="rounded-lg" src="./src/img/img tarjetas/porta-mejor.jpg" alt="album">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                      <img src="./src/img/icon/play.svg" alt="play">
+                    </div>
+                  </div>
+                  <p class="text-[#B3B3B3] text-sm overflow-hidden text-ellipsis line-clamp-2">This Is Sebastian Yatra. Los temas esenciales, todos en una lista.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="flex flex-col gap-3">
+            <div class="justify-between flex items-end">
+              <h3 class="text-[#fff] text-2xl font-bold">Tus artistas favoritos</h3>
+              <a class="text-[#B3B3B3] text-xs font-bold pr-2" href="#">Mostrar todos</a>
+            </div>
+            <div class="relative flex items-center group/btn">
+              <button class="bg-gray-900 rounded-full p-2 cursor-pointer z-1 absolute opacity-0 group-hover/btn:opacity-100">
+                <img src="./src/img/icon/flecha-iz.svg" alt="izquierda">
+              </button>
+              <button class="bg-gray-900 rounded-full p-2 cursor-pointer z-1 absolute opacity-0 group-hover/btn:opacity-100 right-0">
+                <img src="./src/img/icon/flecha-der.svg" alt="derecha">
+              </button>
+              <div class="flex overflow-x-auto no-scrollbar">
+                <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
+                  <div class="relative">
+                    <img class="rounded-full" src="./src/img/img perfiles/paulo-fav.jpg" alt="album">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                      <img src="./src/img/icon/play.svg" alt="play">
+                    </div>
+                  </div>
+                  <div class="flex flex-col">
+                    <a class="text-[#fff]" href="#">Paulo Londra</a>
+                    <span class="text-[#B3B3B3] text-sm">Artista</span>
+                  </div>
+                </div>
+                <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
+                  <div class="relative">
+                    <img class="w-[171px] h-[171px] rounded-full" src="./src/img/img perfiles/feid-fav.jpg" alt="album">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                      <img src="./src/img/icon/play.svg" alt="play">
+                    </div>
+                  </div>
+                  <div class="flex flex-col">
+                    <a class="text-[#fff]" href="#">Feid</a>
+                    <span class="text-[#B3B3B3] text-sm">Artista</span>
+                  </div>
+                </div>
+                <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
+                  <div class="relative">
+                    <img class="rounded-full" src="./src/img/img perfiles/bad-fav.jpg" alt="album">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                      <img src="./src/img/icon/play.svg" alt="play">
+                    </div>
+                  </div>
+                  <div class="flex flex-col">
+                    <a class="text-[#fff]" href="#">Bad Bunny</a>
+                    <span class="text-[#B3B3B3] text-sm">Artista</span>
+                  </div>
+                </div>
+                <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
+                  <div class="relative">
+                    <img class="w-[171px] h-[171px] rounded-full" src="./src/img/img perfiles/sech-fav.jpg" alt="album">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                      <img src="./src/img/icon/play.svg" alt="play">
+                    </div>
+                  </div>
+                  <div class="flex flex-col">
+                    <a class="text-[#fff]" href="#">Sech</a>
+                    <span class="text-[#B3B3B3] text-sm">Artista</span>
+                  </div>
+                </div>
+                <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
+                  <div class="relative">
+                    <img class="w-[171px] h-[171px] rounded-full" src="./src/img/img perfiles/karol-fav.jpg" alt="album">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                      <img src="./src/img/icon/play.svg" alt="play">
+                    </div>
+                  </div>
+                  <div class="flex flex-col">
+                    <a class="text-[#fff]" href="#">KAROL G</a>
+                    <span class="text-[#B3B3B3] text-sm">Artista</span>
+                  </div>
+                </div>
+                <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
+                  <div class="relative">
+                    <img class="w-[171px] h-[171px] rounded-full" src="./src/img/img perfiles/ryan-fav.jpg" alt="album">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                      <img src="./src/img/icon/play.svg" alt="play">
+                    </div>
+                  </div>
+                  <div class="flex flex-col">
+                    <a class="text-[#fff]" href="#">Ryan Castro</a>
+                    <span class="text-[#B3B3B3] text-sm">Artista</span>
+                  </div>
+                </div>
+                <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
+                  <div class="relative">
+                    <img class="w-[171px] h-[171px] rounded-full" src="./src/img/img perfiles/kris-fav.jpg" alt="album">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                      <img src="./src/img/icon/play.svg" alt="play">
+                    </div>
+                  </div>
+                  <div class="flex flex-col">
+                    <a class="text-[#fff]" href="#">Kris R.</a>
+                    <span class="text-[#B3B3B3] text-sm">Artista</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <footer class="flex flex-col w-full gap-6">
+            <section class="flex flex-col items-center xl:flex-row xl:justify-between xl:items-start gap-4 border-t border-zinc-800 py-10">
+              <div class="text-[#B3B3B3] grid grid-cols-[1fr_1fr] sm:grid-cols-[1fr_1fr_1fr_1fr] gap-6">
+                <div class="flex flex-col">
+                  <h3 class="text-[#fff] font-bold gap-1">Empresa</h3>
+                  <a class="text-sm" href="#">Acerca de</a>
+                  <a class="text-sm" href="#">Empleo</a>
+                  <a class="text-sm" href="#">For the Record</a>
+                </div>
+                <div class="flex flex-col gap-1">
+                  <h3 class="text-[#fff] font-bold">Comunidades</h3>
+                  <a class="text-sm" href="#">Para artistas</a>
+                  <a class="text-sm" href="#">Desarrolladores</a>
+                  <a class="text-sm" href="#">Publicidad</a>
+                  <a class="text-sm" href="#">Inversores</a>
+                  <a class="text-sm" href="#">Proveedores</a>
+                </div>
+                <div class="flex flex-col gap-1">
+                  <h3 class="text-[#fff] font-bold">Enlaces útiles</h3>
+                  <a class="text-sm" href="#">Asistencia</a>
+                  <a class="text-sm" href="#">App gratis para móvil</a>
+                </div>
+                <div class="flex flex-col gap-1">
+                  <h3 class="text-[#fff] font-bold">Planes de Spotify</h3>
+                  <a class="text-sm" href="#">Premium Individual</a>
+                  <a class="text-sm" href="#">Premium Duo</a>
+                  <a class="text-sm" href="#">Premium Familiar</a>
+                  <a class="text-sm" href="#">Premium para Estudiantes</a>
+                  <a class="text-sm" href="#">Spotify Free</a>
+                </div>
+              </div>
+              <div class="flex gap-5 pr-2">
+                <div class="flex bg-zinc-800 hover:bg-zinc-500 rounded-full p-3">
+                  <img src="./src/img/icon/ig.svg" alt="ig">
+                </div>
+                <div class="flex bg-zinc-800 hover:bg-zinc-500 rounded-full p-3">
+                  <img src="./src/img/icon/x.svg" alt="ig">
+                </div>
+                <div class="flex bg-zinc-800 hover:bg-zinc-500 rounded-full p-3">
+                  <img src="./src/img/icon/fb.svg" alt="ig">
+                </div>
+              </div>
+            </section>
+            <section class="flex text-[#B3B3B3] text-sm justify-between py-10 border-t border-zinc-800">
+              <div class="flex gap-4">
+                <a href="#">Legal</a>
+                <a href="#">Centro de seguridad y privacidad</a>
+                <a href="#">Política de Privacidad</a>
+                <a href="#">Cookies</a>
+                <a href="#">Información sobre los anuncios</a>
+                <a href="#">Accesibilidad</a>
+              </div>
+              <div class="pr-2">
+                <p>© 2025 Spotify AB</p>
+              </div>
+            </section>
+          </footer>
+        </section>
+      </header>
+    </main>
+    <section class="w-full h-full grid grid-cols-[1fr] md:grid-cols-[2fr_1fr] justify-items-center md:pr-8 md:justify-items-end md:gap-6">
+      <div class="w-full flex items-center justify-center md:justify-end gap-4">
+        <div class="w-[70%] flex flex-col items-center gap-1">
+          <div class="flex items-center gap-8">
+            <img class="cursor-not-allowed" src="./src/img/icon/comoreproducir.svg" alt="como reproducir">
+            <img class="cursor-not-allowed" src="./src/img/icon/msanterior.svg" alt="musica antes">
+            <button class="rounded-full p-2 bg-zinc-700 cursor-not-allowed">
+              <img src="./src/img/icon/pausa.svg" alt="pausa">
+            </button>
+            <img class="cursor-not-allowed" src="./src/img/icon/mssiguiente.svg" alt="musica siguiente">
+            <img class="cursor-not-allowed" src="./src/img/icon/repetir.svg" alt="">
+          </div>
+          <div class="w-[100%] flex items-center gap-2 text-[#B3B3B3]">
+            <span class="flex-none">-:--</span>
+            <span class="w-[100%] border-2 border-gray-500 inline-block rounded-full"></span>
+            <span class="flex-none">-:--</span>
+          </div>
+        </div>
+        <img class="m-1 w-[20px] md:hidden" src="./src/img/icon/volumen.svg" alt="">
+      </div>
+      <div class="hidden md:flex items-center justify-center gap-3">
+        <img class="cursor-not-allowed" src="./src/img/icon/vista-reproduciendo.svg" alt="">
+        <img class="cursor-pointer" src="./src/img/icon/cola.svg" alt="">
+        <img class="cursor-pointer" src="./src/img/icon/conectar.svg" alt="">
+        <div class="relative flex items-center gap-2 cursor-pointer group/vol">
+          <img src="./src/img/icon/volumen.svg" alt="">
+          <span class="flex-none w-[80px] border-2 border-[#fff] group-hover/vol:border-[#107434] inline-block rounded-full"></span>
+          <div class="absolute opacity-0 right-0 w-[10px] h-[10px] rounded-full bg-[#fff] group-hover/vol:opacity-100"></div>
+        </div>
+        <img class="cursor-not-allowed" src="./src/img/icon/full.svg" alt="">
+      </div>
+    </section>
+  </body>
+</html>
