@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="h-full" lang="en">
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   </head>
-  <body class="h-full grid grid-rows-[80px_1fr_80px] bg-black cursor-default">
+  <body class="h-screen grid grid-rows-[80px_1fr_80px] bg-black cursor-default">
     <nav class="flex items-center px-7 py-4 gap-4 justify-between">
       <div class="flex items-center gap-3">
         <img class="w-[35px] cursor-pointer" src="./src/img/logo.png" alt="logo">
@@ -208,15 +208,15 @@
             <div>
               <p class="text-[#B3B3B3] text-xs">Musica sin fin basada en tus canciones y artistas favoritos.</p>
               <div class="justify-between flex items-end">
-                <h3 class="text-[#fff] text-2xl font-bold">Emisoras recomendadas</h3>
-                <a class="text-[#B3B3B3] text-xs font-bold pr-2" href="#">Mostrar todos</a>
+                <h3 class="text-[#fff] text-2xl font-bold hover:underline decoration-white">Emisoras recomendadas</h3>
+                <a class="text-[#B3B3B3] text-xs font-bold pr-2 hover:underline decoration-white" href="#">Mostrar todos</a>
               </div>
             </div>
             <div class="relative flex items-center group/btn">
-              <button class="bg-gray-900 rounded-full p-2 cursor-pointer z-1 absolute opacity-0 group-hover/btn:opacity-100">
+              <button class="bg-gray-900 hover:bg-gray-800 rounded-full p-2 cursor-pointer z-1 absolute opacity-0 group-hover/btn:opacity-100">
                 <img src="./src/img/icon/flecha-iz.svg" alt="izquierda">
               </button>
-              <button class="bg-gray-900 rounded-full p-2 cursor-pointer z-1 absolute opacity-0 group-hover/btn:opacity-100 right-0">
+              <button class="bg-gray-900 hover:bg-gray-800 rounded-full p-2 cursor-pointer z-1 absolute opacity-0 group-hover/btn:opacity-100 right-0">
                 <img src="./src/img/icon/flecha-der.svg" alt="derecha">
               </button>
               <div class="flex overflow-x-auto no-scrollbar">
@@ -288,14 +288,14 @@
           </section>
           <section class="flex flex-col gap-3">
             <div class="justify-between flex items-end">
-              <h3 class="text-[#fff] text-2xl font-bold">Emisoras populares</h3>
-              <a class="text-[#B3B3B3] text-xs font-bold pr-2" href="#">Mostrar todos</a>
+              <h3 class="text-[#fff] text-2xl font-bold hover:underline decoration-white">Emisoras populares</h3>
+              <a class="text-[#B3B3B3] text-xs font-bold pr-2 hover:underline decoration-white" href="#">Mostrar todos</a>
             </div>
             <div class="relative flex items-center group/btn">
-              <button class="bg-gray-900 rounded-full p-2 cursor-pointer z-1 absolute opacity-0 group-hover/btn:opacity-100">
+              <button class="bg-gray-900 hover:bg-gray-800 rounded-full p-2 cursor-pointer z-1 absolute opacity-0 group-hover/btn:opacity-100">
                 <img src="./src/img/icon/flecha-iz.svg" alt="izquierda">
               </button>
-              <button class="bg-gray-900 rounded-full p-2 cursor-pointer z-1 absolute opacity-0 group-hover/btn:opacity-100 right-0">
+              <button class="bg-gray-900 hover:bg-gray-800 rounded-full p-2 cursor-pointer z-1 absolute opacity-0 group-hover/btn:opacity-100 right-0">
                 <img src="./src/img/icon/flecha-der.svg" alt="derecha">
               </button>
               <div class="flex overflow-x-auto no-scrollbar">
@@ -369,15 +369,15 @@
             <div>
               <p class="text-[#B3B3B3] text-xs">Inspirada en tu actividad reciente.</p>
               <div class="justify-between flex items-end">
-                <h3 class="text-[#fff] text-2xl font-bold">Recomendada para hoy</h3>
-                <a class="text-[#B3B3B3] text-xs font-bold pr-2" href="#">Mostrar todos</a>
+                <h3 class="text-[#fff] text-2xl font-bold hover:underline decoration-white">Recomendada para hoy</h3>
+                <a class="text-[#B3B3B3] text-xs font-bold pr-2 hover:underline decoration-white" href="#">Mostrar todos</a>
               </div>
             </div>
             <div class="relative flex items-center group/btn">
-              <button class="bg-gray-900 rounded-full p-2 cursor-pointer z-1 absolute opacity-0 group-hover/btn:opacity-100">
+              <button class="bg-gray-900 hover:bg-gray-800 rounded-full p-2 cursor-pointer z-1 absolute opacity-0 group-hover/btn:opacity-100">
                 <img src="./src/img/icon/flecha-iz.svg" alt="izquierda">
               </button>
-              <button class="bg-gray-900 rounded-full p-2 cursor-pointer z-1 absolute opacity-0 group-hover/btn:opacity-100 right-0">
+              <button class="bg-gray-900 hover:bg-gray-800 rounded-full p-2 cursor-pointer z-1 absolute opacity-0 group-hover/btn:opacity-100 right-0">
                 <img src="./src/img/icon/flecha-der.svg" alt="derecha">
               </button>
               <div class="flex overflow-x-auto no-scrollbar">
@@ -389,8 +389,8 @@
                     </div>
                   </div>
                   <div class="flex flex-col">
-                    <a class="text-[#fff]" href="#">COMO TE VEO</a>
-                    <a class="text-[#B3B3B3] text-sm" href="#">Barho</a>
+                    <a class="text-[#fff] hover:underline decoration-white" href="#">COMO TE VEO</a>
+                    <a class="text-[#B3B3B3] text-sm hover:underline decoration-white" href="#">Barho</a>
                   </div>
                 </div>
                 <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
@@ -401,8 +401,8 @@
                     </div>
                   </div>
                   <div class="flex flex-col">
-                    <a class="text-[#fff]" href="#">Algodon</a>
-                    <a class="text-[#B3B3B3] text-sm" href="#">Lasso</a>
+                    <a class="text-[#fff] hover:underline decoration-white" href="#">Algodon</a>
+                    <a class="text-[#B3B3B3] text-sm hover:underline decoration-white" href="#">Lasso</a>
                   </div>
                 </div>
                 <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
@@ -413,8 +413,8 @@
                     </div>
                   </div>
                   <div class="flex flex-col">
-                    <a class="text-[#fff]" href="#">Besame Bonito (Micro TDH Remix)</a>
-                    <a class="text-[#B3B3B3] text-sm" href="#">Carmen DeLeon, Micro TDH</a>
+                    <a class="text-[#fff] hover:underline decoration-white" href="#">Besame Bonito (Micro TDH Remix)</a>
+                    <a class="text-[#B3B3B3] text-sm hover:underline decoration-white" href="#">Carmen DeLeon, Micro TDH</a>
                   </div>
                 </div>
                 <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
@@ -425,8 +425,8 @@
                     </div>
                   </div>
                   <div class="flex flex-col">
-                    <a class="text-[#fff]" href="#">De Nada (Remix)</a>
-                    <a class="text-[#B3B3B3] text-sm" href="#">Yami Safdie, Micro TDH, Rusherking</a>
+                    <a class="text-[#fff] hover:underline decoration-white" href="#">De Nada (Remix)</a>
+                    <a class="text-[#B3B3B3] text-sm hover:underline decoration-white" href="#">Yami Safdie, Micro TDH, Rusherking</a>
                   </div>
                 </div>
                 <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
@@ -437,8 +437,8 @@
                     </div>
                   </div>
                   <div class="flex flex-col">
-                    <a class="text-[#fff]" href="#">Amapolas (Remix)</a>
-                    <a class="text-[#B3B3B3] text-sm" href="#">Leo Rizzi, Danny Ocean</a>
+                    <a class="text-[#fff] hover:underline decoration-white" href="#">Amapolas (Remix)</a>
+                    <a class="text-[#B3B3B3] text-sm hover:underline decoration-white" href="#">Leo Rizzi, Danny Ocean</a>
                   </div>
                 </div>
                 <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
@@ -449,8 +449,8 @@
                     </div>
                   </div>
                   <div class="flex flex-col">
-                    <a class="text-[#fff]" href="#">Cada Vez Mas <:-)</a>
-                    <a class="text-[#B3B3B3] text-sm" href="#">Marcos Menchasa</a>
+                    <a class="text-[#fff] hover:underline decoration-white" href="#">Cada Vez Mas <:-)</a>
+                    <a class="text-[#B3B3B3] text-sm hover:underline decoration-white" href="#">Marcos Menchasa</a>
                   </div>
                 </div>
                 <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
@@ -461,8 +461,8 @@
                     </div>
                   </div>
                   <div class="flex flex-col">
-                    <a class="text-[#fff]" href="#">Que Hariamos Los Viernes</a>
-                    <a class="text-[#B3B3B3] text-sm" href="#">Jose Otero, Karen Mendez</a>
+                    <a class="text-[#fff] hover:underline decoration-white" href="#">Que Hariamos Los Viernes</a>
+                    <a class="text-[#B3B3B3] text-sm hover:underline decoration-white" href="#">Jose Otero, Karen Mendez</a>
                   </div>
                 </div>
               </div>
@@ -472,15 +472,15 @@
             <div>
               <p class="text-[#B3B3B3] text-xs">Reunimos las mejores canciones de cada interprete.</p>
               <div class="justify-between flex items-end">
-                <h3 class="text-[#fff] text-2xl font-bold">Lo mejor de cada artista</h3>
-                <a class="text-[#B3B3B3] text-xs font-bold pr-2" href="#">Mostrar todos</a>
+                <h3 class="text-[#fff] text-2xl font-bold hover:underline decoration-white">Lo mejor de cada artista</h3>
+                <a class="text-[#B3B3B3] text-xs font-bold pr-2 hover:underline decoration-white" href="#">Mostrar todos</a>
               </div>
             </div>
             <div class="relative flex items-center group/btn">
-              <button class="bg-gray-900 rounded-full p-2 cursor-pointer z-1 absolute opacity-0 group-hover/btn:opacity-100">
+              <button class="bg-gray-900 hover:bg-gray-800 rounded-full p-2 cursor-pointer z-1 absolute opacity-0 group-hover/btn:opacity-100">
                 <img src="./src/img/icon/flecha-iz.svg" alt="izquierda">
               </button>
-              <button class="bg-gray-900 rounded-full p-2 cursor-pointer z-1 absolute opacity-0 group-hover/btn:opacity-100 right-0">
+              <button class="bg-gray-900 hover:bg-gray-800 rounded-full p-2 cursor-pointer z-1 absolute opacity-0 group-hover/btn:opacity-100 right-0">
                 <img src="./src/img/icon/flecha-der.svg" alt="derecha">
               </button>
               <div class="flex overflow-x-auto no-scrollbar">
@@ -552,14 +552,14 @@
           </section>
           <section class="flex flex-col gap-3">
             <div class="justify-between flex items-end">
-              <h3 class="text-[#fff] text-2xl font-bold">Tus artistas favoritos</h3>
-              <a class="text-[#B3B3B3] text-xs font-bold pr-2" href="#">Mostrar todos</a>
+              <h3 class="text-[#fff] text-2xl font-bold hover:underline decoration-white">Tus artistas favoritos</h3>
+              <a class="text-[#B3B3B3] text-xs font-bold pr-2 hover:underline decoration-white" href="#">Mostrar todos</a>
             </div>
             <div class="relative flex items-center group/btn">
-              <button class="bg-gray-900 rounded-full p-2 cursor-pointer z-1 absolute opacity-0 group-hover/btn:opacity-100">
+              <button class="bg-gray-900 hover:bg-gray-800 rounded-full p-2 cursor-pointer z-1 absolute opacity-0 group-hover/btn:opacity-100">
                 <img src="./src/img/icon/flecha-iz.svg" alt="izquierda">
               </button>
-              <button class="bg-gray-900 rounded-full p-2 cursor-pointer z-1 absolute opacity-0 group-hover/btn:opacity-100 right-0">
+              <button class="bg-gray-900 hover:bg-gray-800 rounded-full p-2 cursor-pointer z-1 absolute opacity-0 group-hover/btn:opacity-100 right-0">
                 <img src="./src/img/icon/flecha-der.svg" alt="derecha">
               </button>
               <div class="flex overflow-x-auto no-scrollbar">
@@ -655,30 +655,30 @@
               <div class="text-[#B3B3B3] grid grid-cols-[1fr_1fr] sm:grid-cols-[1fr_1fr_1fr_1fr] gap-6">
                 <div class="flex flex-col">
                   <h3 class="text-[#fff] font-bold gap-1">Empresa</h3>
-                  <a class="text-sm" href="#">Acerca de</a>
-                  <a class="text-sm" href="#">Empleo</a>
-                  <a class="text-sm" href="#">For the Record</a>
+                  <a class="text-sm hover:underline decoration-white" href="#">Acerca de</a>
+                  <a class="text-sm hover:underline decoration-white" href="#">Empleo</a>
+                  <a class="text-sm hover:underline decoration-white" href="#">For the Record</a>
                 </div>
                 <div class="flex flex-col gap-1">
                   <h3 class="text-[#fff] font-bold">Comunidades</h3>
-                  <a class="text-sm" href="#">Para artistas</a>
-                  <a class="text-sm" href="#">Desarrolladores</a>
-                  <a class="text-sm" href="#">Publicidad</a>
-                  <a class="text-sm" href="#">Inversores</a>
-                  <a class="text-sm" href="#">Proveedores</a>
+                  <a class="text-sm hover:underline decoration-white" href="#">Para artistas</a>
+                  <a class="text-sm hover:underline decoration-white" href="#">Desarrolladores</a>
+                  <a class="text-sm hover:underline decoration-white" href="#">Publicidad</a>
+                  <a class="text-sm hover:underline decoration-white" href="#">Inversores</a>
+                  <a class="text-sm hover:underline decoration-white" href="#">Proveedores</a>
                 </div>
                 <div class="flex flex-col gap-1">
                   <h3 class="text-[#fff] font-bold">Enlaces útiles</h3>
-                  <a class="text-sm" href="#">Asistencia</a>
-                  <a class="text-sm" href="#">App gratis para móvil</a>
+                  <a class="text-sm hover:underline decoration-white" href="#">Asistencia</a>
+                  <a class="text-sm hover:underline decoration-white" href="#">App gratis para móvil</a>
                 </div>
                 <div class="flex flex-col gap-1">
                   <h3 class="text-[#fff] font-bold">Planes de Spotify</h3>
-                  <a class="text-sm" href="#">Premium Individual</a>
-                  <a class="text-sm" href="#">Premium Duo</a>
-                  <a class="text-sm" href="#">Premium Familiar</a>
-                  <a class="text-sm" href="#">Premium para Estudiantes</a>
-                  <a class="text-sm" href="#">Spotify Free</a>
+                  <a class="text-sm hover:underline decoration-white" href="#">Premium Individual</a>
+                  <a class="text-sm hover:underline decoration-white" href="#">Premium Duo</a>
+                  <a class="text-sm hover:underline decoration-white" href="#">Premium Familiar</a>
+                  <a class="text-sm hover:underline decoration-white" href="#">Premium para Estudiantes</a>
+                  <a class="text-sm hover:underline decoration-white" href="#">Spotify Free</a>
                 </div>
               </div>
               <div class="flex gap-5 pr-2">
@@ -695,12 +695,12 @@
             </section>
             <section class="flex text-[#B3B3B3] text-sm justify-between py-10 border-t border-zinc-800 gap-6">
               <div class="flex flex-wrap gap-4">
-                <a href="#">Legal</a>
-                <a href="#">Centro de seguridad y privacidad</a>
-                <a href="#">Política de Privacidad</a>
-                <a href="#">Cookies</a>
-                <a href="#">Información sobre los anuncios</a>
-                <a href="#">Accesibilidad</a>
+                <a class="hover:underline decoration-white" href="#">Legal</a>
+                <a class="hover:underline decoration-white" href="#">Centro de seguridad y privacidad</a>
+                <a class="hover:underline decoration-white" href="#">Política de Privacidad</a>
+                <a class="hover:underline decoration-white" href="#">Cookies</a>
+                <a class="hover:underline decoration-white" href="#">Información sobre los anuncios</a>
+                <a class="hover:underline decoration-white" href="#">Accesibilidad</a>
               </div>
               <div class="flex-none pr-2">
                 <p>© 2025 Spotify AB</p>
