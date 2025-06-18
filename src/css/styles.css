@@ -10,7 +10,6 @@
   --animate-duration: 0.2s;
 }
 
-
 .color-scrollbar::-webkit-scrollbar {
   width: 10px;
   background-color: transparent;

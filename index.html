@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stopify Clone</title>
     <link rel="stylesheet" href="./src/css/styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./src/css/stylesTailwind.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   </head>
   <body class="h-screen grid grid-rows-[80px_1fr_80px] bg-black cursor-default">
     <nav class="flex items-center px-7 py-4 gap-4 justify-between">
       <div class="flex items-center gap-3">
         <img class="w-[35px] cursor-pointer" src="./src/img/logo.png" alt="logo">
-        <div class="bg-[#1f1f1f] rounded-full p-3 rounded-full cursor-pointer cursor-pointer hover:scale-[1.05] sm:hidden">
+        <div class="bg-[#1f1f1f] rounded-full p-3 cursor-pointer hover:scale-[1.05] sm:hidden">
           <img src="./src/img/icon/search.svg" alt="search">
         </div>
       </div>
@@ -96,7 +96,7 @@
             </div>
           </div>
           <div class="lg:w-full lg:flex gap-4 p-2 hover:bg-zinc-800 rounded-sm cursor-pointer group/perfil">
-            <div class="relative w-[48px] flex-none bg-[#1f1f1f] p-3 rounded-sm flex items-center justify-center rounded-sm overflow-hidden">
+            <div class="relative w-[48px] flex-none bg-[#1f1f1f] p-3 rounded-sm flex items-center justify-center overflow-hidden">
               <img class="lg:group-hover/perfil:opacity-50" src="./src/img/icon/musica.svg" alt="musica">
               <img class="absolute opacity-0 lg:group-hover/perfil:opacity-100" src="./src/img/icon/play-blanco.svg" alt="">
             </div>
@@ -205,7 +205,7 @@
         </section>
         <section class="flex flex-col gap-6 overflow-y-auto color-scrollbar">
           <section class="flex flex-col gap-3">
-            <div>
+            <div class="flex flex-col">
               <p class="text-[#B3B3B3] text-xs">Musica sin fin basada en tus canciones y artistas favoritos.</p>
               <div class="justify-between flex items-end">
                 <h3 class="text-[#fff] text-2xl font-bold hover:underline decoration-white">Emisoras recomendadas</h3>
@@ -213,17 +213,17 @@
               </div>
             </div>
             <div class="relative flex items-center group/btn">
-              <button class="bg-gray-900 hover:bg-gray-800 rounded-full p-2 cursor-pointer z-1 absolute opacity-0 group-hover/btn:opacity-100">
+              <button class="bg-gray-900 hover:bg-gray-800 rounded-full p-2 cursor-pointer z-1 absolute opacity-0 group-hover/btn:opacity-100 transition duration-300 ease-linear">
                 <img src="./src/img/icon/flecha-iz.svg" alt="izquierda">
               </button>
-              <button class="bg-gray-900 hover:bg-gray-800 rounded-full p-2 cursor-pointer z-1 absolute opacity-0 group-hover/btn:opacity-100 right-0">
+              <button class="bg-gray-900 hover:bg-gray-800 rounded-full p-2 cursor-pointer z-1 absolute opacity-0 group-hover/btn:opacity-100 right-0 transition duration-300 ease-linear">
                 <img src="./src/img/icon/flecha-der.svg" alt="derecha">
               </button>
               <div class="flex overflow-x-auto no-scrollbar">
                 <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
                   <div class="relative">
                     <img class="rounded-lg" src="./src/img/img tarjetas/yandel.jpg" alt="album">
-                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1] transition duration-300 ease-linear">
                       <img src="./src/img/icon/play.svg" alt="play">
                     </div>
                   </div>
@@ -232,7 +232,7 @@
                 <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
                   <div class="relative">
                     <img class="rounded-lg" src="./src/img/img tarjetas/nacho.jpg" alt="album">
-                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1] transition duration-300 ease-linear">
                       <img src="./src/img/icon/play.svg" alt="play">
                     </div>
                   </div>
@@ -241,7 +241,7 @@
                 <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
                   <div class="relative">
                     <img class="rounded-lg" src="./src/img/img tarjetas/sech.jpg" alt="album">
-                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1] transition duration-300 ease-linear">
                       <img src="./src/img/icon/play.svg" alt="play">
                     </div>
                   </div>
@@ -250,7 +250,7 @@
                 <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
                   <div class="relative">
                     <img class="rounded-lg" src="./src/img/img tarjetas/arcangel.jpg" alt="album">
-                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1] transition duration-300 ease-linear">
                       <img src="./src/img/icon/play.svg" alt="play">
                     </div>
                   </div>
@@ -259,7 +259,7 @@
                 <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
                   <div class="relative">
                     <img class="rounded-lg" src="./src/img/img tarjetas/piso 21.jpg" alt="album">
-                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1] transition duration-300 ease-linear">
                       <img src="./src/img/icon/play.svg" alt="play">
                     </div>
                   </div>
@@ -268,7 +268,7 @@
                 <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
                   <div class="relative">
                     <img class="rounded-lg" src="./src/img/img tarjetas/micro.jpg" alt="album">
-                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1] transition duration-300 ease-linear">
                       <img src="./src/img/icon/play.svg" alt="play">
                     </div>
                   </div>
@@ -277,7 +277,7 @@
                 <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
                   <div class="relative">
                     <img class="rounded-lg" src="./src/img/img tarjetas/karol.jpg" alt="album">
-                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1] transition duration-300 ease-linear">
                       <img src="./src/img/icon/play.svg" alt="play">
                     </div>
                   </div>
@@ -287,22 +287,22 @@
             </div>
           </section>
           <section class="flex flex-col gap-3">
-            <div class="justify-between flex items-end">
+            <div class="flex justify-between items-end">
               <h3 class="text-[#fff] text-2xl font-bold hover:underline decoration-white">Emisoras populares</h3>
               <a class="text-[#B3B3B3] text-xs font-bold pr-2 hover:underline decoration-white" href="#">Mostrar todos</a>
             </div>
             <div class="relative flex items-center group/btn">
-              <button class="bg-gray-900 hover:bg-gray-800 rounded-full p-2 cursor-pointer z-1 absolute opacity-0 group-hover/btn:opacity-100">
+              <button class="bg-gray-900 hover:bg-gray-800 rounded-full p-2 cursor-pointer z-1 absolute opacity-0 group-hover/btn:opacity-100 transition duration-300 ease-linear">
                 <img src="./src/img/icon/flecha-iz.svg" alt="izquierda">
               </button>
-              <button class="bg-gray-900 hover:bg-gray-800 rounded-full p-2 cursor-pointer z-1 absolute opacity-0 group-hover/btn:opacity-100 right-0">
+              <button class="bg-gray-900 hover:bg-gray-800 rounded-full p-2 cursor-pointer z-1 absolute opacity-0 group-hover/btn:opacity-100 right-0 transition duration-300 ease-linear">
                 <img src="./src/img/icon/flecha-der.svg" alt="derecha">
               </button>
               <div class="flex overflow-x-auto no-scrollbar">
                 <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
                   <div class="relative">
                     <img class="rounded-lg" src="./src/img/img tarjetas/kany.jpg" alt="album">
-                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1] transition duration-300 ease-linear">
                       <img src="./src/img/icon/play.svg" alt="play">
                     </div>
                   </div>
@@ -311,7 +311,7 @@
                 <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
                   <div class="relative">
                     <img class="rounded-lg" src="./src/img/img tarjetas/grupo.jpg" alt="album">
-                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1] transition duration-300 ease-linear">
                       <img src="./src/img/icon/play.svg" alt="play">
                     </div>
                   </div>
@@ -320,7 +320,7 @@
                 <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
                   <div class="relative">
                     <img class="rounded-lg" src="./src/img/img tarjetas/juan.jpg" alt="album">
-                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1] transition duration-300 ease-linear">
                       <img src="./src/img/icon/play.svg" alt="play">
                     </div>
                   </div>
@@ -329,7 +329,7 @@
                 <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
                   <div class="relative">
                     <img class="rounded-lg" src="./src/img/img tarjetas/feid.jpg" alt="album">
-                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1] transition duration-300 ease-linear">
                       <img src="./src/img/icon/play.svg" alt="play">
                     </div>
                   </div>
@@ -338,7 +338,7 @@
                 <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
                   <div class="relative">
                     <img class="rounded-lg" src="./src/img/img tarjetas/bad.jpg" alt="album">
-                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1] transition duration-300 ease-linear">
                       <img src="./src/img/icon/play.svg" alt="play">
                     </div>
                   </div>
@@ -347,7 +347,7 @@
                 <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
                   <div class="relative">
                     <img class="rounded-lg" src="./src/img/img tarjetas/karol.jpg" alt="album">
-                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1] transition duration-300 ease-linear">
                       <img src="./src/img/icon/play.svg" alt="play">
                     </div>
                   </div>
@@ -356,7 +356,7 @@
                 <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
                   <div class="relative">
                     <img class="w-[172px] rounded-lg" src="./src/img/img tarjetas/diomedes.jpg" alt="album">
-                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1] transition duration-300 ease-linear">
                       <img src="./src/img/icon/play.svg" alt="play">
                     </div>
                   </div>
@@ -366,7 +366,7 @@
             </div>
           </section>
           <section class="flex flex-col gap-3">
-            <div>
+            <div class="flex flex-col">
               <p class="text-[#B3B3B3] text-xs">Inspirada en tu actividad reciente.</p>
               <div class="justify-between flex items-end">
                 <h3 class="text-[#fff] text-2xl font-bold hover:underline decoration-white">Recomendada para hoy</h3>
@@ -374,17 +374,17 @@
               </div>
             </div>
             <div class="relative flex items-center group/btn">
-              <button class="bg-gray-900 hover:bg-gray-800 rounded-full p-2 cursor-pointer z-1 absolute opacity-0 group-hover/btn:opacity-100">
+              <button class="bg-gray-900 hover:bg-gray-800 rounded-full p-2 cursor-pointer z-1 absolute opacity-0 group-hover/btn:opacity-100 transition duration-300 ease-linear">
                 <img src="./src/img/icon/flecha-iz.svg" alt="izquierda">
               </button>
-              <button class="bg-gray-900 hover:bg-gray-800 rounded-full p-2 cursor-pointer z-1 absolute opacity-0 group-hover/btn:opacity-100 right-0">
+              <button class="bg-gray-900 hover:bg-gray-800 rounded-full p-2 cursor-pointer z-1 absolute opacity-0 group-hover/btn:opacity-100 right-0 transition duration-300 ease-linear">
                 <img src="./src/img/icon/flecha-der.svg" alt="derecha">
               </button>
               <div class="flex overflow-x-auto no-scrollbar">
                 <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
                   <div class="relative">
                     <img class="rounded-lg" src="./src/img/img tarjetas/comoteveo.jpg" alt="album">
-                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1] transition duration-300 ease-linear">
                       <img src="./src/img/icon/play.svg" alt="play">
                     </div>
                   </div>
@@ -396,7 +396,7 @@
                 <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
                   <div class="relative">
                     <img class="rounded-lg" src="./src/img/img tarjetas/algodon.jpg" alt="album">
-                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1] transition duration-300 ease-linear">
                       <img src="./src/img/icon/play.svg" alt="play">
                     </div>
                   </div>
@@ -408,7 +408,7 @@
                 <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
                   <div class="relative">
                     <img class="rounded-lg" src="./src/img/img tarjetas/besamebonito.jpg" alt="album">
-                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1] transition duration-300 ease-linear">
                       <img src="./src/img/icon/play.svg" alt="play">
                     </div>
                   </div>
@@ -420,7 +420,7 @@
                 <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
                   <div class="relative">
                     <img class="rounded-lg" src="./src/img/img tarjetas/denada.jpg" alt="album">
-                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1] transition duration-300 ease-linear">
                       <img src="./src/img/icon/play.svg" alt="play">
                     </div>
                   </div>
@@ -432,7 +432,7 @@
                 <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
                   <div class="relative">
                     <img class="rounded-lg" src="./src/img/img tarjetas/amapolas.jpg" alt="album">
-                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1] transition duration-300 ease-linear">
                       <img src="./src/img/icon/play.svg" alt="play">
                     </div>
                   </div>
@@ -444,7 +444,7 @@
                 <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
                   <div class="relative">
                     <img class="rounded-lg" src="./src/img/img tarjetas/cada.jpg" alt="album">
-                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1] transition duration-300 ease-linear">
                       <img src="./src/img/icon/play.svg" alt="play">
                     </div>
                   </div>
@@ -456,7 +456,7 @@
                 <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
                   <div class="relative">
                     <img class="rounded-lg" src="./src/img/img tarjetas/queharemos.jpg" alt="album">
-                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1] transition duration-300 ease-linear">
                       <img src="./src/img/icon/play.svg" alt="play">
                     </div>
                   </div>
@@ -469,7 +469,7 @@
             </div>
           </section>
           <section class="flex flex-col gap-3">
-            <div>
+            <div class="flex flex-col">
               <p class="text-[#B3B3B3] text-xs">Reunimos las mejores canciones de cada interprete.</p>
               <div class="justify-between flex items-end">
                 <h3 class="text-[#fff] text-2xl font-bold hover:underline decoration-white">Lo mejor de cada artista</h3>
@@ -477,17 +477,17 @@
               </div>
             </div>
             <div class="relative flex items-center group/btn">
-              <button class="bg-gray-900 hover:bg-gray-800 rounded-full p-2 cursor-pointer z-1 absolute opacity-0 group-hover/btn:opacity-100">
+              <button class="bg-gray-900 hover:bg-gray-800 rounded-full p-2 cursor-pointer z-1 absolute opacity-0 group-hover/btn:opacity-100 transition duration-300 ease-linear">
                 <img src="./src/img/icon/flecha-iz.svg" alt="izquierda">
               </button>
-              <button class="bg-gray-900 hover:bg-gray-800 rounded-full p-2 cursor-pointer z-1 absolute opacity-0 group-hover/btn:opacity-100 right-0">
+              <button class="bg-gray-900 hover:bg-gray-800 rounded-full p-2 cursor-pointer z-1 absolute opacity-0 group-hover/btn:opacity-100 right-0 transition duration-300 ease-linear">
                 <img src="./src/img/icon/flecha-der.svg" alt="derecha">
               </button>
               <div class="flex overflow-x-auto no-scrollbar">
                 <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
                   <div class="relative">
                     <img class="rounded-lg" src="./src/img/img tarjetas/nacho-mejor.jpg" alt="album">
-                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1] transition duration-300 ease-linear">
                       <img src="./src/img/icon/play.svg" alt="play">
                     </div>
                   </div>
@@ -496,7 +496,7 @@
                 <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
                   <div class="relative">
                     <img class="rounded-lg" src="./src/img/img tarjetas/micro-mejor.jpg" alt="album">
-                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1] transition duration-300 ease-linear">
                       <img src="./src/img/icon/play.svg" alt="play">
                     </div>
                   </div>
@@ -505,7 +505,7 @@
                 <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
                   <div class="relative">
                     <img class="rounded-lg" src="./src/img/img tarjetas/paulo-mejor.jpg" alt="album">
-                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1] transition duration-300 ease-linear">
                       <img src="./src/img/icon/play.svg" alt="play">
                     </div>
                   </div>
@@ -514,7 +514,7 @@
                 <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
                   <div class="relative">
                     <img class="rounded-lg" src="./src/img/img tarjetas/natti-mejor.jpg" alt="album">
-                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1] transition duration-300 ease-linear">
                       <img src="./src/img/icon/play.svg" alt="play">
                     </div>
                   </div>
@@ -523,7 +523,7 @@
                 <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
                   <div class="relative">
                     <img class="rounded-lg" src="./src/img/img tarjetas/maluma-mejor.jpg" alt="album">
-                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1] transition duration-300 ease-linear">
                       <img src="./src/img/icon/play.svg" alt="play">
                     </div>
                   </div>
@@ -532,7 +532,7 @@
                 <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
                   <div class="relative">
                     <img class="rounded-lg" src="./src/img/img tarjetas/yatra-mejor.jpg" alt="album">
-                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1] transition duration-300 ease-linear">
                       <img src="./src/img/icon/play.svg" alt="play">
                     </div>
                   </div>
@@ -541,7 +541,7 @@
                 <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
                   <div class="relative">
                     <img class="rounded-lg" src="./src/img/img tarjetas/porta-mejor.jpg" alt="album">
-                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1] transition duration-300 ease-linear">
                       <img src="./src/img/icon/play.svg" alt="play">
                     </div>
                   </div>
@@ -556,17 +556,17 @@
               <a class="text-[#B3B3B3] text-xs font-bold pr-2 hover:underline decoration-white" href="#">Mostrar todos</a>
             </div>
             <div class="relative flex items-center group/btn">
-              <button class="bg-gray-900 hover:bg-gray-800 rounded-full p-2 cursor-pointer z-1 absolute opacity-0 group-hover/btn:opacity-100">
+              <button class="bg-gray-900 hover:bg-gray-800 rounded-full p-2 cursor-pointer z-1 absolute opacity-0 group-hover/btn:opacity-100 transition duration-300 ease-linear">
                 <img src="./src/img/icon/flecha-iz.svg" alt="izquierda">
               </button>
-              <button class="bg-gray-900 hover:bg-gray-800 rounded-full p-2 cursor-pointer z-1 absolute opacity-0 group-hover/btn:opacity-100 right-0">
+              <button class="bg-gray-900 hover:bg-gray-800 rounded-full p-2 cursor-pointer z-1 absolute opacity-0 group-hover/btn:opacity-100 right-0 transition duration-300 ease-linear">
                 <img src="./src/img/icon/flecha-der.svg" alt="derecha">
               </button>
               <div class="flex overflow-x-auto no-scrollbar">
                 <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
                   <div class="relative">
                     <img class="rounded-full" src="./src/img/img perfiles/paulo-fav.jpg" alt="album">
-                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1] transition duration-300 ease-linear">
                       <img src="./src/img/icon/play.svg" alt="play">
                     </div>
                   </div>
@@ -578,7 +578,7 @@
                 <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
                   <div class="relative">
                     <img class="w-[171px] h-[171px] rounded-full" src="./src/img/img perfiles/feid-fav.jpg" alt="album">
-                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1] transition duration-300 ease-linear">
                       <img src="./src/img/icon/play.svg" alt="play">
                     </div>
                   </div>
@@ -590,7 +590,7 @@
                 <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
                   <div class="relative">
                     <img class="rounded-full" src="./src/img/img perfiles/bad-fav.jpg" alt="album">
-                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1] transition duration-300 ease-linear">
                       <img src="./src/img/icon/play.svg" alt="play">
                     </div>
                   </div>
@@ -602,7 +602,7 @@
                 <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
                   <div class="relative">
                     <img class="w-[171px] h-[171px] rounded-full" src="./src/img/img perfiles/sech-fav.jpg" alt="album">
-                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1] transition duration-300 ease-linear">
                       <img src="./src/img/icon/play.svg" alt="play">
                     </div>
                   </div>
@@ -614,7 +614,7 @@
                 <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
                   <div class="relative">
                     <img class="w-[171px] h-[171px] rounded-full" src="./src/img/img perfiles/karol-fav.jpg" alt="album">
-                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1] transition duration-300 ease-linear">
                       <img src="./src/img/icon/play.svg" alt="play">
                     </div>
                   </div>
@@ -626,7 +626,7 @@
                 <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
                   <div class="relative">
                     <img class="w-[171px] h-[171px] rounded-full" src="./src/img/img perfiles/ryan-fav.jpg" alt="album">
-                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1] transition duration-300 ease-linear">
                       <img src="./src/img/icon/play.svg" alt="play">
                     </div>
                   </div>
@@ -638,7 +638,7 @@
                 <div class="flex-none flex flex-col gap-2 w-[195px] p-3 hover:bg-zinc-800 rounded-lg group cursor-pointer">
                   <div class="relative">
                     <img class="w-[171px] h-[171px] rounded-full" src="./src/img/img perfiles/kris-fav.jpg" alt="album">
-                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1]">
+                    <div class="shadow-xl/30 absolute bottom-0 right-0 p-2 bg-green-400 rounded-full m-2 opacity-0 group-hover:opacity-100 hover:bg-green-300 hover:scale-[1.1] transition duration-300 ease-linear">
                       <img src="./src/img/icon/play.svg" alt="play">
                     </div>
                   </div>
@@ -682,13 +682,13 @@
                 </div>
               </div>
               <div class="flex gap-5 pr-2">
-                <div class="flex bg-zinc-800 hover:bg-zinc-500 rounded-full p-3">
+                <div class="flex bg-zinc-800 hover:bg-zinc-500 rounded-full p-3 cursor-pointer">
                   <img src="./src/img/icon/ig.svg" alt="ig">
                 </div>
-                <div class="flex bg-zinc-800 hover:bg-zinc-500 rounded-full p-3">
+                <div class="flex bg-zinc-800 hover:bg-zinc-500 rounded-full p-3 cursor-pointer">
                   <img src="./src/img/icon/x.svg" alt="ig">
                 </div>
-                <div class="flex bg-zinc-800 hover:bg-zinc-500 rounded-full p-3">
+                <div class="flex bg-zinc-800 hover:bg-zinc-500 rounded-full p-3 cursor-pointer">
                   <img src="./src/img/icon/fb.svg" alt="ig">
                 </div>
               </div>
