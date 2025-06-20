@@ -30,7 +30,6 @@
     --font-weight-bold: 700;
     --radius-sm: 0.25rem;
     --radius-lg: 0.5rem;
-    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
@@ -240,6 +239,12 @@
   .h-screen {
     height: 100vh;
   }
+  .max-h-screen {
+    max-height: 100vh;
+  }
+  .min-h-screen {
+    min-height: 100vh;
+  }
   .w-\[10px\] {
     width: 10px;
   }
@@ -276,6 +281,9 @@
   .w-full {
     width: 100%;
   }
+  .max-w-full {
+    max-width: 100%;
+  }
   .flex-none {
     flex: none;
   }
@@ -294,11 +302,23 @@
   .resize {
     resize: both;
   }
+  .grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
   .grid-cols-\[1fr\] {
     grid-template-columns: 1fr;
   }
   .grid-cols-\[1fr_1fr\] {
     grid-template-columns: 1fr 1fr;
+  }
+  .grid-cols-\[80px_1fr_1fr\] {
+    grid-template-columns: 80px 1fr 1fr;
+  }
+  .grid-cols-\[80px_2fr_1fr\] {
+    grid-template-columns: 80px 2fr 1fr;
+  }
+  .grid-cols-\[80px_4fr_1fr\] {
+    grid-template-columns: 80px 4fr 1fr;
   }
   .grid-rows-\[80px_1fr_80px\] {
     grid-template-rows: 80px 1fr 80px;
@@ -320,6 +340,9 @@
   }
   .justify-center {
     justify-content: center;
+  }
+  .justify-end {
+    justify-content: flex-end;
   }
   .justify-items-center {
     justify-items: center;
@@ -532,26 +555,6 @@
     --tw-duration: 300ms;
     transition-duration: 300ms;
   }
-  .duration-400 {
-    --tw-duration: 400ms;
-    transition-duration: 400ms;
-  }
-  .duration-500 {
-    --tw-duration: 500ms;
-    transition-duration: 500ms;
-  }
-  .duration-1000 {
-    --tw-duration: 1000ms;
-    transition-duration: 1000ms;
-  }
-  .duration-100000 {
-    --tw-duration: 100000ms;
-    transition-duration: 100000ms;
-  }
-  .ease-in-out {
-    --tw-ease: var(--ease-in-out);
-    transition-timing-function: var(--ease-in-out);
-  }
   .ease-linear {
     --tw-ease: linear;
     transition-timing-function: linear;
@@ -683,9 +686,19 @@
       display: flex;
     }
   }
+  .sm\:grid {
+    @media (width >= 40rem) {
+      display: grid;
+    }
+  }
   .sm\:hidden {
     @media (width >= 40rem) {
       display: none;
+    }
+  }
+  .sm\:w-full {
+    @media (width >= 40rem) {
+      width: 100%;
     }
   }
   .sm\:grid-cols-\[1fr_1fr_1fr_1fr\] {
@@ -693,9 +706,59 @@
       grid-template-columns: 1fr 1fr 1fr 1fr;
     }
   }
+  .sm\:grid-cols-\[60px_1\.1fr_1fr\] {
+    @media (width >= 40rem) {
+      grid-template-columns: 60px 1.1fr 1fr;
+    }
+  }
+  .sm\:grid-cols-\[60px_1\.2fr_1fr\] {
+    @media (width >= 40rem) {
+      grid-template-columns: 60px 1.2fr 1fr;
+    }
+  }
+  .sm\:grid-cols-\[60px_1\.3fr_1fr\] {
+    @media (width >= 40rem) {
+      grid-template-columns: 60px 1.3fr 1fr;
+    }
+  }
+  .sm\:grid-cols-\[60px_1\.4fr_1fr\] {
+    @media (width >= 40rem) {
+      grid-template-columns: 60px 1.4fr 1fr;
+    }
+  }
+  .sm\:grid-cols-\[60px_1\.5fr_1fr\] {
+    @media (width >= 40rem) {
+      grid-template-columns: 60px 1.5fr 1fr;
+    }
+  }
+  .sm\:grid-cols-\[60px_1\.5r_1fr\] {
+    @media (width >= 40rem) {
+      grid-template-columns: 60px 1.5r 1fr;
+    }
+  }
+  .sm\:grid-cols-\[70px_1\.5fr_1fr\] {
+    @media (width >= 40rem) {
+      grid-template-columns: 70px 1.5fr 1fr;
+    }
+  }
+  .sm\:grid-cols-\[80px_1\.5fr_1fr\] {
+    @media (width >= 40rem) {
+      grid-template-columns: 80px 1.5fr 1fr;
+    }
+  }
   .sm\:grid-cols-\[80px_1fr\] {
     @media (width >= 40rem) {
       grid-template-columns: 80px 1fr;
+    }
+  }
+  .sm\:grid-cols-\[80px_1fr_1fr\] {
+    @media (width >= 40rem) {
+      grid-template-columns: 80px 1fr 1fr;
+    }
+  }
+  .sm\:justify-end {
+    @media (width >= 40rem) {
+      justify-content: flex-end;
     }
   }
   .sm\:rounded-tr-none {
@@ -722,14 +785,64 @@
       display: flex;
     }
   }
+  .md\:grid {
+    @media (width >= 48rem) {
+      display: grid;
+    }
+  }
   .md\:hidden {
     @media (width >= 48rem) {
       display: none;
     }
   }
+  .md\:w-full {
+    @media (width >= 48rem) {
+      width: 100%;
+    }
+  }
   .md\:grid-cols-\[2fr_1fr\] {
     @media (width >= 48rem) {
       grid-template-columns: 2fr 1fr;
+    }
+  }
+  .md\:grid-cols-\[60px_1\.1fr_1fr\] {
+    @media (width >= 48rem) {
+      grid-template-columns: 60px 1.1fr 1fr;
+    }
+  }
+  .md\:grid-cols-\[60px_1\.2fr_1\.1fr\] {
+    @media (width >= 48rem) {
+      grid-template-columns: 60px 1.2fr 1.1fr;
+    }
+  }
+  .md\:grid-cols-\[60px_1\.2fr_1fr\] {
+    @media (width >= 48rem) {
+      grid-template-columns: 60px 1.2fr 1fr;
+    }
+  }
+  .md\:grid-cols-\[60px_1\.15fr_1fr\] {
+    @media (width >= 48rem) {
+      grid-template-columns: 60px 1.15fr 1fr;
+    }
+  }
+  .md\:grid-cols-\[80px_1\.5fr_1fr\] {
+    @media (width >= 48rem) {
+      grid-template-columns: 80px 1.5fr 1fr;
+    }
+  }
+  .md\:grid-cols-\[80px_1fr_1fr\] {
+    @media (width >= 48rem) {
+      grid-template-columns: 80px 1fr 1fr;
+    }
+  }
+  .md\:grid-cols-\[80px_2fr_1fr\] {
+    @media (width >= 48rem) {
+      grid-template-columns: 80px 2fr 1fr;
+    }
+  }
+  .md\:grid-cols-\[800px_1fr_1fr\] {
+    @media (width >= 48rem) {
+      grid-template-columns: 800px 1fr 1fr;
     }
   }
   .md\:justify-end {
@@ -767,14 +880,84 @@
       display: none;
     }
   }
+  .lg\:w-\[80\%\] {
+    @media (width >= 64rem) {
+      width: 80%;
+    }
+  }
+  .lg\:w-\[90\%\] {
+    @media (width >= 64rem) {
+      width: 90%;
+    }
+  }
   .lg\:w-full {
     @media (width >= 64rem) {
       width: 100%;
     }
   }
+  .lg\:grid-cols-\[1fr_1\.5fr_1\.5fr\] {
+    @media (width >= 64rem) {
+      grid-template-columns: 1fr 1.5fr 1.5fr;
+    }
+  }
+  .lg\:grid-cols-\[1fr_1\.5fr_1\.6fr\] {
+    @media (width >= 64rem) {
+      grid-template-columns: 1fr 1.5fr 1.6fr;
+    }
+  }
+  .lg\:grid-cols-\[1fr_1\.5fr_1\.7fr\] {
+    @media (width >= 64rem) {
+      grid-template-columns: 1fr 1.5fr 1.7fr;
+    }
+  }
+  .lg\:grid-cols-\[1fr_1fr_1\.5fr\] {
+    @media (width >= 64rem) {
+      grid-template-columns: 1fr 1fr 1.5fr;
+    }
+  }
+  .lg\:grid-cols-\[1fr_1fr_1fr\] {
+    @media (width >= 64rem) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  .lg\:grid-cols-\[60px_1\.15fr_1fr\] {
+    @media (width >= 64rem) {
+      grid-template-columns: 60px 1.15fr 1fr;
+    }
+  }
+  .lg\:grid-cols-\[250px_1\.5fr_1\.5fr\] {
+    @media (width >= 64rem) {
+      grid-template-columns: 250px 1.5fr 1.5fr;
+    }
+  }
+  .lg\:grid-cols-\[300px_1fr_1fr\] {
+    @media (width >= 64rem) {
+      grid-template-columns: 300px 1fr 1fr;
+    }
+  }
+  .lg\:grid-cols-\[340px_1\.5fr_1fr\] {
+    @media (width >= 64rem) {
+      grid-template-columns: 340px 1.5fr 1fr;
+    }
+  }
+  .lg\:grid-cols-\[350px_1\.5fr_1\.5fr\] {
+    @media (width >= 64rem) {
+      grid-template-columns: 350px 1.5fr 1.5fr;
+    }
+  }
+  .lg\:grid-cols-\[350px_1\.5fr_1fr\] {
+    @media (width >= 64rem) {
+      grid-template-columns: 350px 1.5fr 1fr;
+    }
+  }
   .lg\:grid-cols-\[350px_1fr\] {
     @media (width >= 64rem) {
       grid-template-columns: 350px 1fr;
+    }
+  }
+  .lg\:grid-cols-\[350px_1fr_1fr\] {
+    @media (width >= 64rem) {
+      grid-template-columns: 350px 1fr 1fr;
     }
   }
   .lg\:items-start {
@@ -818,6 +1001,51 @@
           opacity: 100%;
         }
       }
+    }
+  }
+  .xl\:block {
+    @media (width >= 80rem) {
+      display: block;
+    }
+  }
+  .xl\:w-\[80\%\] {
+    @media (width >= 80rem) {
+      width: 80%;
+    }
+  }
+  .xl\:w-\[90\%\] {
+    @media (width >= 80rem) {
+      width: 90%;
+    }
+  }
+  .xl\:grid-cols-\[340px_1\.1fr_1fr\] {
+    @media (width >= 80rem) {
+      grid-template-columns: 340px 1.1fr 1fr;
+    }
+  }
+  .xl\:grid-cols-\[340px_1\.2fr_1fr\] {
+    @media (width >= 80rem) {
+      grid-template-columns: 340px 1.2fr 1fr;
+    }
+  }
+  .xl\:grid-cols-\[340px_1\.3fr_1fr\] {
+    @media (width >= 80rem) {
+      grid-template-columns: 340px 1.3fr 1fr;
+    }
+  }
+  .xl\:grid-cols-\[340px_1\.5fr_1\.2fr\] {
+    @media (width >= 80rem) {
+      grid-template-columns: 340px 1.5fr 1.2fr;
+    }
+  }
+  .xl\:grid-cols-\[340px_1\.5fr_1\.5fr\] {
+    @media (width >= 80rem) {
+      grid-template-columns: 340px 1.5fr 1.5fr;
+    }
+  }
+  .xl\:grid-cols-\[340px_1\.5fr_1fr\] {
+    @media (width >= 80rem) {
+      grid-template-columns: 340px 1.5fr 1fr;
     }
   }
   .xl\:flex-row {
